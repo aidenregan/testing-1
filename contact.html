@@ -85,7 +85,8 @@
           e.preventDefault()
           fetch(scriptURL, { method: 'POST', body: new FormData(form)})
             .then(response => {
-              form.reset)
+              form.reset()
+            })
             .catch(error => console.error('Error!', error.message))
         })
       </script>
