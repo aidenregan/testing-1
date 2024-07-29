@@ -77,19 +77,17 @@
         </div>
     </footer>
 
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbzjNsiaVPrDQlbYL913OpLruppJJbTMoOd-_8WaFT01PSLnKw8_t7Gmepc30Wkg8WCl4w/exec'
-        const form = document.forms['submit-to-google-sheet']
-      
-        form.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => {
-              form.reset()
-            })
-            .catch(error => console.error('Error!', error.message))
-        })
-      </script>
+<script>
+  const scriptURL = '<SCRIPT URL>'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
 
     <script src="./main.js"></script>
     </body>
